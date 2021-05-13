@@ -1,0 +1,65 @@
+﻿@model IEnumerable<AppWebNeo.Models.ContatoViewModel>
+@{
+    ViewData["Title"] = "Contatos";
+}
+
+<div class="col-md-12 container">
+    <div class="col-md-12">
+        <h3 class="jumbotron-fluid d-block p-2 bg-secondary text-white">REGISTROS CADASTRADOS</h3>       
+    </div>  
+    <div class="container">
+        <div class="col-md-12">
+            <p>
+                <a class="btn btn-secondary float-right" asp-action="Cadastro">Novo</a>
+            </p>
+            <br />
+            <br />
+            <table class="table">
+                <thead>
+                    <tr class="bg-secondary text-white">
+                        <th>
+                            @Html.DisplayNameFor(model => model.Nome)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Email)
+                        </th>
+
+                        <th>
+                            @Html.DisplayNameFor(model => model.Telefone)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Endereco)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Cidade)
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Nome)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Email)
+                            </td>
+
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Telefone)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Endereco)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Cidade)
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+

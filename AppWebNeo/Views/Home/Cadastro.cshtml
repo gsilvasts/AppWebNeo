@@ -1,0 +1,62 @@
+﻿@model AppWebNeo.Models.ContatoInputModel
+
+@{
+    ViewData["Title"] = "Cadastro";
+}
+
+
+<div class="col-md-12 container">
+    <div class="col-md-12">
+        <h3 class="jumbotron-fluid d-block p-2 bg-secondary text-white">CADASTRO DE CONTATOS</h3>
+    </div>
+    <div class="container">
+        <div class="col-md-12">
+            <form asp-action="Cadastro">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Nome, htmlAttributes: new { @class = "control-label" })
+                    @Html.EditorFor(model => model.Nome, new { HtmlAttributes = new { @class = "form-control col-md-6" } })
+                    <div class="col-md-10">
+                        @Html.ValidationMessageFor(model => model.Nome, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label" })
+                    @Html.EditorFor(model => model.Email, new { HtmlAttributes = new { @class = "form-control col-md-6" } })
+                    <div class="col-md-10">
+                        @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Telefone, htmlAttributes: new { @class = "control-label" })
+                    @Html.EditorFor(model => model.Telefone, new { HtmlAttributes = new { @class = "form-control col-md-4" } })
+                    <div class="col-md-10">
+                        @Html.ValidationMessageFor(model => model.Telefone, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Endereco, htmlAttributes: new { @class = "control-label" })
+                    @Html.EditorFor(model => model.Endereco, new { HtmlAttributes = new { @class = "form-control col-md-10" } })
+                    <div class="col-md-10">
+                        @Html.ValidationMessageFor(model => model.Endereco, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Cidade, htmlAttributes: new { @class = "control-label" })
+                    @Html.EditorFor(model => model.Cidade, new { HtmlAttributes = new { @class = "form-control col-md-4" } })
+                    <div class="col-md-10">
+                        @Html.ValidationMessageFor(model => model.Cidade, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group float-right">
+                    <input type="submit" value="Salvar" class="btn btn-success" />
+                    <input type="reset" value="Limpar" class="btn btn-danger" />
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
