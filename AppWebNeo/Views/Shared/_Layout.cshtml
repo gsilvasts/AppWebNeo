@@ -15,7 +15,7 @@
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
-                </button>               
+                </button>
             </div>
         </nav>
     </header>
@@ -33,6 +33,25 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/lib/jQuery-Mask-Plugin-master/src/jquery.mask.js" type="text/javascript" asp-append-version="true"></script>
+    <script>
+        $(document).ready(function ()
+        {
+            $(".txtTelefone").mask("(00) 0000-00009");
+            $(".txtTelefone").addClass("form-control");
+
+            $("#form").submit(function () {
+                var telefoneValue = $(".txtTelefone").val();
+
+                // Remove os caracteres que não são dígitos:
+                telefoneValue = telefoneValue.replace(/\D/g, '');
+
+                // Atualiza o valor no campo do formulário:
+                $(".txtTelefone").val(telefoneValue);
+            });       
+        });
+    </script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
+
 </html>

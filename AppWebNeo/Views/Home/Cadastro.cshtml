@@ -29,7 +29,8 @@
                 </div>
                 <div class="form-group">
                     @Html.LabelFor(model => model.Telefone, htmlAttributes: new { @class = "control-label" })
-                    @Html.EditorFor(model => model.Telefone, new { HtmlAttributes = new { @class = "form-control col-md-4" } })
+                    @Html.EditorFor(model => model.Telefone, new { HtmlAttributes = new { @class = "form-control col-md-4 txtTelefone", @pattern="/([0–9]{2}/)[/s][0-9]{4}-[0-9]{4,5}" } })
+                 
                     <div class="col-md-10">
                         @Html.ValidationMessageFor(model => model.Telefone, "", new { @class = "text-danger" })
                     </div>
@@ -50,13 +51,15 @@
                 </div>
                 <div class="form-group float-right">
                     <input type="submit" value="Salvar" class="btn btn-success" />
-                    <input type="reset" value="Limpar" class="btn btn-danger" />
+                    <input type="reset" value="Limpar" class="btn btn-danger"/>
                 </div>
             </form>
         </div>
     </div>
 </div>
 
+
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+
 }

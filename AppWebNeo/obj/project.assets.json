@@ -11,6 +11,9 @@
           "lib/netstandard2.0/Humanizer.dll": {}
         }
       },
+      "jQuery.InputMask/5.0.5": {
+        "type": "package"
+      },
       "Microsoft.AspNetCore.Html.Abstractions/2.2.0": {
         "type": "package",
         "dependencies": {
@@ -2028,6 +2031,23 @@
         "lib/netstandard2.0/Humanizer.dll",
         "lib/netstandard2.0/Humanizer.xml",
         "logo.png"
+      ]
+    },
+    "jQuery.InputMask/5.0.5": {
+      "sha512": "EdfCcNHEulHTV9wGoMgaW/Ch//pHVlSbZeQxTkkC91wNICVw7K4ePp3bcI4ZBU8d3sCxIx5aebNk4c3gTENJmw==",
+      "type": "package",
+      "path": "jquery.inputmask/5.0.5",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Readme.txt",
+        "content/Scripts/inputmask/bindings/inputmask.binding.js",
+        "content/Scripts/inputmask/inputmask.js",
+        "content/Scripts/inputmask/inputmask.min.js",
+        "content/Scripts/inputmask/jquery.inputmask.js",
+        "content/Scripts/inputmask/jquery.inputmask.min.js",
+        "jquery.inputmask.5.0.5.nupkg.sha512",
+        "jquery.inputmask.nuspec"
       ]
     },
     "Microsoft.AspNetCore.Html.Abstractions/2.2.0": {
@@ -7136,7 +7156,8 @@
       "Microsoft.EntityFrameworkCore.Design >= 5.0.6",
       "Microsoft.EntityFrameworkCore.InMemory >= 5.0.6",
       "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.6",
-      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 5.0.2"
+      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 5.0.2",
+      "jQuery.InputMask >= 5.0.5"
     ]
   },
   "packageFolders": {
@@ -7199,6 +7220,10 @@
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
             "target": "Package",
             "version": "[5.0.2, )"
+          },
+          "jQuery.InputMask": {
+            "target": "Package",
+            "version": "[5.0.5, )"
           }
         },
         "imports": [

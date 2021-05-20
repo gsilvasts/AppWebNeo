@@ -15,7 +15,7 @@ namespace AppWebNeo.Models
         public string Email { get; set; }
         [Display(Name = "Telefone")]
         [Required(ErrorMessage = "O campo telefone é obrigatório!", AllowEmptyStrings = false)]
-        [RegularExpression("^(?!0+$)(\\+\\d{1,3}[- ]?)?(?!0+$)\\d{10,15}$", ErrorMessage = "Entre com um número válido de telefone!")]
+        //[RegularExpression("^(?!0+$)(\\+\\d{1,3}[- ]?)?(?!0+$)\\d{10,15}$", ErrorMessage = "Entre com um número válido de telefone!")]
         public string Telefone { get; set; }
         [Display(Name = "Endereço")]
         public string Endereco { get; set; }

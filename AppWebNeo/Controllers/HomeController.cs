@@ -33,7 +33,7 @@ namespace AppWebNeo.Controllers
                             Cidade = cont.Cidade
                         };
 
-            return View(model.ToList());
+            return View(model.OrderBy(m => m.Nome).ToList());
         }
 
         public IActionResult Cadastro()

@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "9StI0aIl1B1QcuAtJLeJQuhzy75EWJPSQZv7fLmZTZ+ANeSMJrTw+gkItBdkB91enECYom1mC47IBtgBBIEnCA==",
+  "dgSpecHash": "vvSjK3nQ2EwDGObR7jKaNzhLPzxZnPNWvebs8j09waywuTl/opA+i0lWDy3/prHTXqMMTRT6IPlgEAUnX6evDQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\gsilva.sts\\Desktop\\GelvaneNascimentoSilva\\AppWebNeo\\AppWebNeo\\AppWebNeo.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\gsilva.sts\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
+    "C:\\Users\\gsilva.sts\\.nuget\\packages\\jquery.inputmask\\5.0.5\\jquery.inputmask.5.0.5.nupkg.sha512",
     "C:\\Users\\gsilva.sts\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\gsilva.sts\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",
     "C:\\Users\\gsilva.sts\\.nuget\\packages\\microsoft.aspnetcore.razor.language\\5.0.0\\microsoft.aspnetcore.razor.language.5.0.0.nupkg.sha512",
